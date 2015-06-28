@@ -1,0 +1,26 @@
+% Dot paper
+% Based on: http://www.reddit.com/r/LaTeX/comments/28hgui/is_there_a_simple_way_of_creating_a_grid_of_dots/
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{hmargin=1.1cm,vmargin=1.42cm}
+\usepackage{tikz}
+\usepackage{color}
+
+\def\width{17.5cm}
+\def\hauteur{25cm}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \foreach \x in {0,1,...,18} {
+        \foreach \y in {0,1,...,25} {
+            \fill[color=black!20!white] (\x,\y) circle (0.5mm);
+        }
+    }
+\end{tikzpicture}
+
+\end{document}
+
+
+
