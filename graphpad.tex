@@ -10,10 +10,13 @@
 
 \begin{document}
 
-\begin{tikzpicture}[x=1cm, y=1cm, semitransparent]
-    \draw[step=0.5cm, line width=0.1mm, black!20!white] (0,0) grid (\width,\hauteur);
-    \draw[step=2.5cm, line width=0.5mm, black!30!white] (0,0) grid (\width,\hauteur);
-\end{tikzpicture}
+\foreach \z in {0,1,...,3} {
+    \begin{tikzpicture}[x=1cm, y=1cm, semitransparent]
+        \draw[step=0.5cm, line width=0.1mm, black!20!white] (0,0) grid (\width,\hauteur);
+        \draw[step=2.5cm, line width=0.5mm, black!30!white] (0,0) grid (\width,\hauteur);
+    \end{tikzpicture}
+    \newpage
+}
 
 
 \end{document}
